@@ -1,0 +1,75 @@
+.section1 {
+  margin: 0 50px;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .section1 {
+    margin: 0;
+  }
+  .section1 h1 {
+    margin-left: 20px;
+  }
+}
+.ScrollContainer {
+  scroll-padding-right: 3.8em;
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.ScrollContainer::-webkit-scrollbar {
+  display: none;
+}
+.Box {
+  flex: 0 0 250px;
+  width: 250px;
+  height: 250px;
+  background-color: #242424;
+  scroll-snap-align: end;
+  border-radius: 15px;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+.Box h2 {
+  color: grey
+}
+.ScrollContainer > *:not(:last-child) {
+  margin-right: 15px;
+}
+@media (max-width: 600px) {
+  .ScrollContainer > *:first-child {
+    margin-left: 20px;
+  }
+}
+.iconleft {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+}
+.iconright {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+}
+@media (max-width: 600px) {
+  .iconleft {
+    left: 10px;
+  }
+  .iconright {
+    right: 10px;
+  }
+}
+.fixBugMarginRight {
+  display: none;
+}
+@media only screen and (max-device-width: 600px) {
+  .iconleft, .iconright {
+    display: none;
+  }
+  .fixBugMarginRight {
+    display: block;
+    padding: 5px
+  }
+}
+
